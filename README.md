@@ -34,17 +34,17 @@ The library target audience is primarily researchers. The library also intends t
 
 ## Installation
 
-Available through The Python Package Index (PyPI): 
+**The library will soon** be available through The Python Package Index (PyPI): 
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install InsolvencyAnnouncementsGer 
+Then the the package manager [pip](https://pip.pypa.io/en/stable/) to install InsolvencyAnnouncementsGer can be used:
 
 ```python
 pip install InsolvencyAnnouncementsGer
 ```
-Or install through the author's Github repository 
+For now the library can be installed through the author's Github repository 
 
 ```python
-pip install git+https://github.com/NDelventhal/InsolvencyAnnouncementsGER
+pip install git+https://github.com/NDelventhal/InsolvencyAnnouncementsGer
 ```
 
 ## Requirements 
@@ -103,7 +103,7 @@ Updates a single scraped url of an announcement, in case it turned invalid
 ```python
 ia.insol_ann_daily_summary(subject= "Openings", date_from = "24.10.2020",  date_to = "28.10.2020"):
 ```
-Returns a summary overview of counts of the specified announcement subject (example: "Openings") by German state and register type and non-register linked annoucements of specified date range.  
+Returns a summary overview of counts of the announcements associated with the specified subject (example: "Openings") by German state and register type as well as non-register linked annoucements of the specified date range.  
 
 *For more details and examples, please refer to the documentation/docstrings.*
 
