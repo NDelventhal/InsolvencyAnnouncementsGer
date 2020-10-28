@@ -101,7 +101,7 @@ ia.update_url(url)
 Updates a single scraped url of an announcement, in case it turned invalid
 
 ```python
-ia.insol_ann_daily_summary(subject= "Openings", date_from = "24.10.2020",  date_to = "28.10.2020"):
+ia.insol_ann_state_summary(subject= "Openings", date_from = "24.10.2020",  date_to = "28.10.2020"):
 ```
 Returns a summary overview of counts of the announcements associated with the specified subject (example: "Openings") by German state and register type as well as non-register linked annoucements of the specified date range.  
 
