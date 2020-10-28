@@ -41,7 +41,7 @@ Then the the package manager [pip](https://pip.pypa.io/en/stable/) to install In
 ```python
 pip install InsolvencyAnnouncementsGer
 ```
-For now the library can be installed through the author's Github repository 
+For now the library can be installed through the author's Github repository: 
 
 ```python
 pip install git+https://github.com/NDelventhal/InsolvencyAnnouncementsGer
@@ -54,7 +54,7 @@ The following libraries are required:
 - requests 
 - beautifulsoup4
 
-The package manager [pip](https://pip.pypa.io/en/stable/) can be used to install these.
+The package manager [pip](https://pip.pypa.io/en/stable/) can be used to install these:
 
 ```python
 pip install pandas requests beautifulsoup4
@@ -68,17 +68,17 @@ import InsolvencyAnnouncementsGer as ia
 ```python
 ia.regcourts_scr() 
 ```
-Returns a pd.DataFrame listing German registrations courts and corresponding register types.
+Returns a pandas.DataFrame listing German registrations courts and corresponding register types.
 
 ```python
 ia.inscourts_scr()
 ```
-Returns a pd.DataFrame containing insolvency courts and German state abbreviations.
+Returns a pandas.DataFrame containing insolvency courts and German state abbreviations.
 
 ```python
 ia.insol_proc_scrprep()
 ```
-Prepares arguments prior to the insolvency proceedings scraping. Requires user input to define search criteria and returns a pd.DataFrame containing scraped content in case of findings. Refer to the docstring of insol_proc_scr() for more information on the output.
+Prepares arguments prior to the insolvency proceedings scraping. Requires user input to define search criteria and returns a pandas.DataFrame containing scraped content in case of findings. Refer to the docstring of insol_proc_scr() for more information on the output.
 
 ```python
 ia.insol_proc_scr(reg = ["HRA", "HRB"], state = "Berlin",date_from = "30.08.2020", date_to = "", name = "",
@@ -88,12 +88,12 @@ ia.insol_proc_scr(reg = ["HRA", "HRB"], state = "Berlin",date_from = "30.08.2020
 ```
 
 Returns scraped search results for all insolvency announcements of the register types 'HRA' and 'HRB' from the specified date ('date_from') in the form day-month-year (DD.MM.YYYY) in the state Berlin. The unlimited search (search_type = "unlimited") is limited to data released within the last two weeks. Returns search results according to entered arguments, search arguments may be defined with the help of ia.insol_proc_scrprep().
-Returns pd.DataFrame containing scraped content in case of findings. Data columns contain the scrape date, the selected registry type, the URL of the scraped announcement, the scraped hyperlink information for each observation and optional the scraped website content of the announcement.
+Returns pandas.DataFrame containing scraped content in case of findings. Data columns contain the scrape date, the selected registry type, the URL of the scraped announcement, the scraped hyperlink information for each observation and optional the scraped website content of the announcement.
 
 ```python
 ia.insol_proc_scrpar(df, url = "url", scraped_html= "", convert_html_to_text = True, register_type = False):
 ```
-Parses the scraped insolvency proceedings annoucements, the pd.DataFrame output from insol_proc_scr() or insol_proc_scrprep(). Returns the  input pd.DataFrame with appended columns listing for each announcement as variables the corresponding insolvency court, the insolvency court abbreviation, the court file number, the name or firm name of the debtor, the domicile of the debtor, the subject of the annoucement, the registration court, the identified register type (optional), the register number, the German state abbreviation, the date, timestamp and the scraped_text (optional)
+Parses the scraped insolvency proceedings annoucements, the pd.DataFrame output from insol_proc_scr() or insol_proc_scrprep(). Returns the input pandas.DataFrame with appended columns listing for each announcement as variables the corresponding insolvency court, the insolvency court abbreviation, the court file number, the name or firm name of the debtor, the domicile of the debtor, the subject of the annoucement, the registration court, the identified register type (optional), the register number, the German state abbreviation, the date, timestamp and the scraped_text (optional)
 
 ```python
 ia.update_url(url) 
