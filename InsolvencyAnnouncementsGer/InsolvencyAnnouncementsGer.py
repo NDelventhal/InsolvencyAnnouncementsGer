@@ -295,7 +295,7 @@ def regcourts_state_scr():
 
 def insol_proc_scrpar(df = "", url = "", scraped_html= "", convert_html_to_text = True, register_type = False):
  """
- Parses information from the scraped insolvency proceedings - the output from insol_proc_scr() or insol_proc_scrprep() - dataframe.
+ Parses information from the scraped insolvency proceedings - the output from insol_proc_scr() or insol_proc_scrprep() pandas.DataFrame.
  
    Args:
        df (Dataframe): The dataframe as output of insol_proc_scr() or insol_proc_scrprep()
