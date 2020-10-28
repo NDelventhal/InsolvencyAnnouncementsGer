@@ -1,6 +1,6 @@
 <!-- TOC -->
 ## Table of Content
-- [InsolvencyAnnouncementsGER](#insolvencyannouncementsger) 
+- [InsolvencyAnnouncementsGer](#insolvencyannouncementsger) 
 - [Background](#background)
 - [Intended Audience: Science/Research](#intended-audience-scienceresearch)
 - [Installation](#installation)
