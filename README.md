@@ -105,7 +105,7 @@ ia.insol_ann_state_summary(subject= "Openings", date_from = "24.10.2020",  date_
 ```
 Returns a summary overview of counts of the announcements associated with the specified subject (example: "Openings") by German state and register type as well as non-register linked annoucements of the specified date range.  
 
-*For more details and examples, please refer to the documentation/docstrings.*
+*For more details please refer to the functions' docstrings.*
 
 ## Support 
 
@@ -129,8 +129,6 @@ Please refer to https://www.insolvenzbekanntmachungen.de/en/hinweise.html for fu
 
 - Development (Q3 2020) 
 - Add library to The Python Package Index (PyPI) (Q4 2020)
-- Develop test routines (Q4 2020 - Q3 2021)
-- Add visuals, including Choropleth maps (Q4 2020 - Q1 2021)
 
 Please also check the open issues for other proposed features.
 
