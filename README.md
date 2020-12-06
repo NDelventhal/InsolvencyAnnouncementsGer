@@ -36,7 +36,7 @@ The library target audience is primarily researchers. The library also intends t
 
 **The library will soon** be available through The Python Package Index (PyPI): 
 
-Then the the package manager [pip](https://pip.pypa.io/en/stable/) to install InsolvencyAnnouncementsGer can be used:
+Then the package manager [pip](https://pip.pypa.io/en/stable/) to install InsolvencyAnnouncementsGer can be used:
 
 ```python
 pip install InsolvencyAnnouncementsGer
@@ -68,12 +68,12 @@ import InsolvencyAnnouncementsGer as ia
 ```python
 ia.regcourts_scr() 
 ```
-Returns a pandas.DataFrame listing German registrations courts and corresponding register types.
+Returns a Pandas DataFram listing German registrations courts and corresponding register types.
 
 ```python
 ia.inscourts_scr()
 ```
-Returns a pandas.DataFrame containing insolvency courts and German state abbreviations.
+Returns a Pandas DataFrame containing insolvency courts and German state abbreviations.
 
 ```python
 ia.insol_proc_scrprep()
@@ -93,7 +93,7 @@ Returns pandas.DataFrame containing scraped content in case of findings. Data co
 ```python
 ia.insol_proc_scrpar(df, url = "url", scraped_html= "", convert_html_to_text = True, register_type = False):
 ```
-Parses the scraped insolvency proceedings annoucements, the pd.DataFrame output from insol_proc_scr() or insol_proc_scrprep(). Returns the input pandas.DataFrame with appended columns listing for each announcement as variables the corresponding insolvency court, the insolvency court abbreviation, the court file number, the name or firm name of the debtor, the domicile of the debtor, the subject of the annoucement, the registration court, the identified register type (optional), the register number, the German state abbreviation, the date, timestamp and the scraped_text (optional)
+Parses the scraped insolvency proceedings annoucements, the Pandas DataFrame output from insol_proc_scr() or insol_proc_scrprep(). Returns the Pandas DataFrame with appended columns listing for each announcement as variables the corresponding insolvency court, the insolvency court abbreviation, the court file number, the name or firm name of the debtor, the domicile of the debtor, the subject of the annoucement, the registration court, the identified register type (optional), the register number, the German state abbreviation, the date, timestamp and the scraped_text (optional)
 
 ```python
 ia.update_url(url) 
