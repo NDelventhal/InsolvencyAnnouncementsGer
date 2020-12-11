@@ -34,14 +34,14 @@ The library target audience is primarily researchers. The library also intends t
 
 ## Installation
 
-**The library will soon** be available through The Python Package Index (PyPI): 
+The library is available through The Python Package Index (PyPI). 
 
-Then the package manager [pip](https://pip.pypa.io/en/stable/) to install InsolvencyAnnouncementsGer can be used:
+To install the library InsolvencyAnnouncementsGer through the package manager [pip](https://pip.pypa.io/en/stable/) run:
 
 ```python
 pip install InsolvencyAnnouncementsGer
 ```
-For now the library can be installed through the author's Github repository: 
+Alternatively, the library can be installed through the author's Github repository with: 
 
 ```python
 pip install git+https://github.com/NDelventhal/InsolvencyAnnouncementsGer
