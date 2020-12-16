@@ -68,7 +68,7 @@ import InsolvencyAnnouncementsGer as ia
 ```python
 ia.regcourts_scr() 
 ```
-Returns a Pandas DataFram listing German registrations courts and corresponding register types.
+Returns a Pandas DataFrame listing German registrations courts and corresponding register types.
 
 ```python
 ia.inscourts_scr()
@@ -78,7 +78,7 @@ Returns a Pandas DataFrame containing insolvency courts and German state abbrevi
 ```python
 ia.insol_proc_scrprep()
 ```
-Prepares arguments prior to the insolvency proceedings scraping. Requires user input to define search criteria and returns a pandas.DataFrame containing scraped content in case of findings. Refer to the docstring of insol_proc_scr() for more information on the output.
+Prepares arguments prior to the insolvency proceedings scraping. Requires user input to define search criteria and returns a Pandas DataFrame containing scraped content in case of findings. Refer to the docstring of insol_proc_scr() for more information on the output.
 
 ```python
 ia.insol_proc_scr(reg = ["HRA", "HRB"], state = "Berlin",date_from = "30.08.2020", date_to = "", name = "",
@@ -88,17 +88,17 @@ ia.insol_proc_scr(reg = ["HRA", "HRB"], state = "Berlin",date_from = "30.08.2020
 ```
 
 Returns scraped search results for all insolvency announcements of the register types 'HRA' and 'HRB' from the specified date ('date_from') in the form day-month-year (DD.MM.YYYY) in the state Berlin. The unlimited search (search_type = "unlimited") is limited to data released within the last two weeks. Returns search results according to entered arguments, search arguments may be defined with the help of ia.insol_proc_scrprep().
-Returns pandas.DataFrame containing scraped content in case of findings. Data columns contain the scrape date, the selected registry type, the URL of the scraped announcement, the scraped hyperlink information for each observation and optional the scraped website content of the announcement.
+Returns Pandas DataFrame containing scraped content in case of findings. Data columns contain the scrape date, the selected registry type, the URL of the scraped announcement, the scraped hyperlink information for each observation and optional the scraped website content of the announcement.
 
 ```python
 ia.insol_proc_scrpar(df, url = "url", scraped_html= "", convert_html_to_text = True, register_type = False):
 ```
-Parses the scraped insolvency proceedings annoucements, the Pandas DataFrame output from insol_proc_scr() or insol_proc_scrprep(). Returns the Pandas DataFrame with appended columns listing for each announcement as variables the corresponding insolvency court, the insolvency court abbreviation, the court file number, the name or firm name of the debtor, the domicile of the debtor, the subject of the annoucement, the registration court, the identified register type (optional), the register number, the German state abbreviation, the date, timestamp and the scraped_text (optional)
+Parses the scraped insolvency proceedings announcements, the Pandas DataFrame output from insol_proc_scr() or insol_proc_scrprep(). Returns the Pandas DataFrame with appended columns listing for each announcement as variables the corresponding insolvency court, the insolvency court abbreviation, the court file number, the name or firm name of the debtor, the domicile of the debtor, the subject of the announcement, the registration court, the identified register type (optional), the register number, the German state abbreviation, the date, timestamp and the scraped_text (optional)
 
 ```python
 ia.update_url(url) 
 ```
-Updates a single scraped url of an announcement, in case it turned invalid
+Updates a single scraped url of an announcement, in case it turned invalid.
 
 ```python
 ia.insol_ann_state_summary(subject= "Openings", date_from = "24.10.2020",  date_to = "28.10.2020"):
@@ -133,7 +133,7 @@ Please refer to https://www.insolvenzbekanntmachungen.de/en/hinweise.html for fu
 Please also check the open issues for other proposed features.
 
 ## Contributing
-Contributions are welcome. Please do not hesitate to open an issue or pull request. Prior to pull requests containing major changes, please communicate these changes via a new issue. Please try to avoid duplicate and have a look at the open issues for a list of known issues and proposed changes prior to it.  
+Contributions are welcome. Please do not hesitate to open an issue or pull request. Prior to pull requests containing major changes, please communicate these changes via a new issue. Please try to avoid duplicates and have a look at the open issues for a list of known issues and proposed changes prior to it.  
 
 ## Acknowledgments
 
