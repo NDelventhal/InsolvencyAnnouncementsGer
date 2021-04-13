@@ -224,7 +224,7 @@ def insol_proc_scr(reg = "",
     print('Number of search results:', search_results)
     print('Scrape', max_pages, 'pages')
     links = soup.select('a[href^="javascript:"]')
-    print('Sraping page:', _u[33])
+    print('Scraping page:', _u[33])
     temp = pd.DataFrame(links)
     if max_pages > 1:
       for i in range(2, max_pages + 1):
@@ -288,7 +288,7 @@ def regcourts_state_scr():
  states_d = dict(zip(_states, _states_a))   
  for key, value in states_d.items(): 
      state = soup.find(id=key)
-     globals()[f'list_{value}'] = []  # requires Python3.6 or higher   
+     globals()[f'list_{value}'] = []  # requires Python 3.6 or higher   
      register_courts = state.find_next('ul')
      for y in register_courts:
         globals()[f'list_{value}'].append(y.string.replace("Amtsgericht ", ""))
