@@ -200,6 +200,8 @@ def insol_proc_scr(reg = "",
  for x in _u[25]:
     print('Register type:', x)
     _u[25] = x
+    if _u[33] != str(1):
+       _u[33] = str(1)
     url = "".join(_u)
     html_page = requests.get(url).content
     soup = BeautifulSoup(html_page, 'html.parser')
@@ -222,7 +224,7 @@ def insol_proc_scr(reg = "",
     print('Number of search results:', search_results)
     print('Scrape', max_pages, 'pages')
     links = soup.select('a[href^="javascript:"]')
-    print('Sraping page: 1')
+    print('Sraping page:', _u[33])
     temp = pd.DataFrame(links)
     if max_pages > 1:
       for i in range(2, max_pages + 1):
