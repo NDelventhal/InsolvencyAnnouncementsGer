@@ -18,9 +18,12 @@
 
 # InsolvencyAnnouncementsGer
 
-InsolvencyAnnouncementsGer is a Python library for searching, viewing and scraping public announcements of German bankruptcy courts from https://www.insolvenzbekanntmachungen.de. 
+InsolvencyAnnouncementsGer is a Python library for searching, viewing and scraping public announcements of German bankruptcy courts from https://www.insolvenzbekanntmachungen.de.
 
-*Please note:* Downtime of the by the library accessed German justice portal may occur and also changes of the official register may affect the functionality of the library. 
+In order to comply with governmental directives as well as in order to progress with harmonising European insolvency data the online portal saw changes in 2021. As a result the released announcements of the insolvency courts on insolvency proceedings are not provided over a single source anymore. Publications on insolvency proceedings, which have been initiated in 2017 or earlier, are offered through "alt.insolvenzbekanntmachungen.de". And publications on insolvency proceedings, which have been initiated in 2018 or later, are now offered through "neu.insolvenzbekanntmachungen.de". As of now, the library continues to support "alt.insolvenzbekanntmachungen.de".
+
+*Please note:* Downtime of the by the library accessed German justice portal may occur and also changes of the official register may affect the functionality of the library. The recent change of the online portal of German bankruptcy courts described above is outlined to be the first of multiple phases.
+
 
 ## Background
 
@@ -30,7 +33,7 @@ In this context the library's output aims to contribute to transparent research 
 
 ## Intended Audience: Science/Research
 
-The library target audience is primarily researchers. The library also intends to diminish the barriers non-German speaking researchers may face working with the German justice portal of interest. 
+The library's target audience is primarily researchers. The library also intends to diminish the barriers non-German speaking researchers may face working with the German justice portal of interest. 
 
 ## Installation
 
@@ -101,9 +104,9 @@ ia.update_url(url)
 Updates a single scraped url of an announcement, in case it turned invalid.
 
 ```python
-ia.insol_ann_state_summary(subject= "Openings", date_from = "24.10.2020",  date_to = "28.10.2020"):
+ia.insol_ann_state_summary(subject= "Protective measures", date_from = "24.10.2020",  date_to = "28.10.2020"):
 ```
-Returns a summary overview of counts of the announcements associated with the specified subject (example: "Openings") by German state and register type as well as non-register linked annoucements of the specified date range.  
+Returns a summary overview of counts of the announcements associated with the specified subject (example: "Protective measures") by German state and register type as well as non-register linked annoucements of the specified date range.  
 
 *For more details please refer to the functions' docstrings.*
 
@@ -115,7 +118,7 @@ More information on the insolvency announcement data is available under the foll
 
 ## Data protection and online privacy
 
-The library scrapes data from the official register of the German justice portal. According to the German justice portal the following information on an access of the contents from https://www.insolvenzbekanntmachungen.de is stored for six weeks, before the data is made anonymous and is further solely used for statistical purposes:
+The library scrapes data from the official register of the German justice portal. According to the German justice portal the following information on an access of the contents from insolvenzbekanntmachungen.de  is stored for six weeks, before the data is made anonymous and is further solely used for statistical purposes:
 
 - the name of the file requested
 - the date and time of the request
@@ -123,7 +126,7 @@ The library scrapes data from the official register of the German justice portal
 - the error status 
 - the IP address of the accessing computer
 
-Please refer to https://www.insolvenzbekanntmachungen.de/en/hinweise.html for further information. 
+Please refer to https://alt.insolvenzbekanntmachungen.de/datenschutz.html for further information. 
 
 ## Roadmap
 

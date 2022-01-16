@@ -23,7 +23,7 @@ _subjects_e = ["All Subjects", "Protective measures", "Openings","Events", "Deci
                "Others", "Decisions taken in the residual-debt exemption proceedings", "Distribution records (§ 188 InsO) of custodians/trustees",
                "Monitored insolvency plans", "Dismissals due to lack of assets"]
 
-_default_url = ['https://www.insolvenzbekanntmachungen.de/cgi-bin', '/bl_suche.pl?PHPSESSID=971ac0cbc174f6cfc71ed602a6787558&','Suchfunktion=',
+_default_url = ['https://alt.insolvenzbekanntmachungen.de/cgi-bin', '/bl_suche.pl?PHPSESSID=971ac0cbc174f6cfc71ed602a6787558&','Suchfunktion=',
               'uneingeschr', '&Absenden=Suche+starten&Bundesland=', '--+Alle+Bundesl%E4nder+--', '&Gericht=','--+Alle+Insolvenzgerichte+--',
               '&Datum1=', '', '&Datum2=', '', '&Name=', '', '&Sitz=', '', '&Abteilungsnr=', '', '&Registerzeichen=', '--', '&Lfdnr=',
               '', '&Jahreszahl=', '--', '&Registerart=','--+keine+Angabe+--', '&select_registergericht=&Registergericht=', '--+keine+Angabe+--', '&Registernummer=',
@@ -87,7 +87,7 @@ def regcourts_scr():
 
 def inscourts_scr():
  """
- Scrapes the insolvency courts of each German state from the webpage insolvenzbekanntmachungen.de.
+ Scrapes the insolvency courts of each German state from the webpage alt.insolvenzbekanntmachungen.de.
 
  Returns:
      A Dataframe, data columns are as follows: 
@@ -131,14 +131,14 @@ def insol_proc_scr(reg = "",
                    search_type = "",
                    ins_court = "",
                    scrape_html = True):
- """Scrapes insolvency proceedings information on www.insolvenzbekanntmachungen.de.
+ """Scrapes insolvency proceedings information on alt.insolvenzbekanntmachungen.de.
     Default arguments contain no search specification, with exception of the search type 
     (default: uneingeschr or unlimited). The unlimited search is limited to data released within the last two weeks,
     while for the detailed search sufficient information needs to be entered.
     For the detailed search an insolvency court needs to be specified, among family / firm name, 
     domicile of debtor or the bankruptcy court file number or in case of a registered firm the registration number 
     and the registration court.
-    See https://www.insolvenzbekanntmachungen.de/hilfe.html for more information. 
+    See https://alt.insolvenzbekanntmachungen.de/hilfe.html for more information. 
     
     Args:
         reg (str or list of str): The register type of the proceeding announcement {"GnR", "HRA", "HRB", "PR", "VR"}
@@ -251,11 +251,11 @@ def insol_proc_scr(reg = "",
  return df
 
 def update_url(url = ""):
- """Updates the PHP SESSION ID of the as URL entered link of proceedings from https://www.insolvenzbekanntmachungen.de/, 
+ """Updates the PHP SESSION ID of the as URL entered link of proceedings from alt.insolvenzbekanntmachungen.de, 
   which turn invalid after some time. 
   
   Args:
-        url (str): The URL of a proceeding announcementfrom https://www.insolvenzbekanntmachungen.de/ containing a PHP SESSION ID
+        url (str): The URL of a proceeding announcement from alt.insolvenzbekanntmachungen.de containing a PHP SESSION ID
         
   Returns:
         url (str): The URL of the annoucement with a newly generated PHP SESSION ID
@@ -358,7 +358,7 @@ def insol_proc_scrpar(df = "", url = "", scraped_html= "", convert_html_to_text 
 def insol_proc_scrprep():  
  '''  
  Prepares arguments prior to the insolvency proceedings scraping. Requires user input, confirm entries with keyboard command Enter.
- Scrapes insolvency proceedings information on www.insolvenzbekanntmachungen.de. See the documentation for insol_proc_scr() for more information.
+ Scrapes insolvency proceedings information on alt.insolvenzbekanntmachungen.de. See the documentation for insol_proc_scr() for more information.
     Args:
        user input, confirm entries with keyboard command Enter
     

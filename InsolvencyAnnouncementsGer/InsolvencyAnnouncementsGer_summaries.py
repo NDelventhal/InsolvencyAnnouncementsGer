@@ -63,7 +63,7 @@ def insol_ann_state_summary(subject= "", date_from = "",  date_to = ""):
         date_range = date_from + " - " + date_to
         output =  [stat, date_range, subject]
         for r in _reg: 
-            url = ("https://www.insolvenzbekanntmachungen.de/cgi-bin/bl_suche.pl?PHPSESSID=0bf78007299d3c5cd66ae29a5fbed458&Suchfunktion=uneingeschr&Absenden=Suche+starten&Bundesland=" + 
+            url = ("https://alt.insolvenzbekanntmachungen.de/cgi-bin/bl_suche.pl?PHPSESSID=0bf78007299d3c5cd66ae29a5fbed458&Suchfunktion=uneingeschr&Absenden=Suche+starten&Bundesland=" + 
             state + "&Gericht=--+Alle+Insolvenzgerichte+--&Datum1=" + date_from + "&Datum2="+ date_to +"&Name=&Sitz=&Abteilungsnr=&Registerzeichen=--&Lfdnr=&Jahreszahl=--&Registerart="+ r +
             "&select_registergericht=&Registergericht=--+keine+Angabe+--&Registernummer=&Gegenstand=" + subjects + "&matchesperpage=10&sortedby=Datum&page=2#Ergebnis")
             html_page = requests.get(url).content
